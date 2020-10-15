@@ -12,7 +12,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ityped/1.0.3/index.min.js" integrity="sha512-QxRh0HtuimfzIqAJLbfH6+uQj3UuJeyQFDCBR9LqKbtDZ8k6t1P0vNWTc/ExvmuHtPsbFSkaUq8IRYIliZN1GA==" crossorigin="anonymous"></script>
+    <!-- AOS JS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -46,16 +49,24 @@
           <nav>
             <ul>
               <li>
-                <a href="index.html"> <i class="fas fa-home nav-icon"></i> Home</a>
+                <a href="index.html">
+                  <i class="fas fa-home nav-icon"></i> Home</a
+                >
               </li>
               <li>
-                <a href="about.html"> <i class="fas fa-house-user nav-icon"></i> About us</a>
+                <a href="about.html">
+                  <i class="fas fa-house-user nav-icon"></i> About us</a
+                >
               </li>
               <li>
-                <a href="#"> <i class="fas fa-phone-square-alt nav-icon"></i> Contact</a>
+                <a href="#">
+                  <i class="fas fa-phone-square-alt nav-icon"></i> Contact</a
+                >
               </li>
               <li>
-                <a href="login.html"> <i class="fas fa-unlock-alt nav-icon"></i> Login</a>
+                <a href="login.html">
+                  <i class="fas fa-unlock-alt nav-icon"></i> Login</a
+                >
               </li>
               <li>
                 <a href="reg.html" class="reg-btn"> Start investing</a>
@@ -71,31 +82,116 @@
       <section class="landing-section">
         <div class="text-container">
           <div class="container">
-            <h1>we are everyone digital finance asset.</h1>
-            <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus dolor eaque, possimus doloremque sequi consequuntur vero rem facere ex a!</h6>
-            <a href="#" class="core-btn">Start investing Now</a>
+            <h1 id="typed"></h1>
+            <div id="typed-strings">
+              <h1>we are everyone digital finance asset.</h1>
+            </div>
+            <h6>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus
+              dolor eaque, possimus doloremque sequi consequuntur vero rem
+              facere ex a!
+            </h6>
+            <a href="reg.html" class="core-btn" data-aos="fade-up">Start investing Now</a>
           </div>
         </div>
         <div class="image-container">
-          <img src="img/icons/landing-1.svg" alt="">
+          <img src="img/icons/landing-1.svg" alt="" />
         </div>
       </section>
+      <!-- TradingView Widget Start -->
+      <div class="ticker">
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"></div>
+          <script
+            type="text/javascript"
+            src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+            async
+          >
+              {
+              "symbols": [
+                {
+                  "proName": "BITSTAMP:BTCUSD",
+                  "title": "BTC/USD"
+                },
+                {
+                  "proName": "BITSTAMP:ETHUSD",
+                  "title": "ETH/USD"
+                },
+                {
+                  "description": "XRP/USD",
+                  "proName": "BITSTAMP:XRPUSD"
+                },
+                {
+                  "description": "LTC/USD",
+                  "proName": "BITSTAMP:LTCUSD"
+                },
+                {
+                  "description": "BCH/USD",
+                  "proName": "BITSTAMP:BCHUSD"
+                },
+                {
+                  "description": "ETH/BTC",
+                  "proName": "BITSTAMP:ETHBTC"
+                },
+                {
+                  "description": "BTC/EUR",
+                  "proName": "BITSTAMP:BTCEUR"
+                },
+                {
+                  "description": "ETH/EUR",
+                  "proName": "BITSTAMP:ETHEUR"
+                },
+                {
+                  "description": "XRP/EUR",
+                  "proName": "BITSTAMP:XRPEUR"
+                },
+                {
+                  "description": "XRP/BTC",
+                  "proName": "BITSTAMP:XRPBTC"
+                },
+                {
+                  "description": "BCH/BTC",
+                  "proName": "BITSTAMP:BCHBTC"
+                }
+              ],
+              "colorTheme": "light",
+              "isTransparent": true,
+              "displayMode": "adaptive",
+              "locale": "en"
+            }
+          </script>
+        </div>
+      </div>
+      <!-- TradingView Widget END -->
 
-      <section class="section who-section">
+      <section class="section who-section" >
         <div class="container">
           <div class="row">
             <div class="col-md-6 mx-auto">
-              <div class="img">
+              <div class="img" data-aos="fade-up" data-aos-duration="1000">
                 <!-- <img src="img/icons/wallet_monochromatic.svg" alt=""> -->
                 <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tsmHhYnnY4Q" allowfullscreen></iframe>
+                  <iframe
+                    class="embed-responsive-item"
+                    src="https://www.youtube.com/embed/tsmHhYnnY4Q"
+                    allowfullscreen
+                  ></iframe>
                 </div>
               </div>
             </div>
             <div class="col-md-6 mx-auto">
-              <div class="text">
-                <h2 class="section-title">Why you need to start investing with us.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quibusdam nostrum ea maxime natus, et amet in quas magnam fugit hic tempora incidunt saepe mollitia ab quis iure error aut tenetur excepturi non quasi ratione corrupti. Repudiandae, a. Excepturi et modi quos cupiditate </p>
+              <div class="text" data-aos="fade-up" data-aos-duration="1000">
+                <h2 class="section-title">
+                  Why you need to start investing with us.
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Expedita quibusdam nostrum ea maxime natus, et amet in quas
+                  magnam fugit hic tempora incidunt saepe mollitia ab quis iure
+                  error aut tenetur excepturi non quasi ratione corrupti.
+                  Repudiandae, a. Excepturi et modi quos cupiditate
+                </p>
                 <a href="#" class="core-btn">Start Investing</a>
               </div>
             </div>
@@ -103,47 +199,63 @@
         </div>
       </section>
 
+      <!-- Section Offer-secton -->
       <section class="section offer-section">
         <div class="container">
-          <div class="title-container">
+          <div class="title-container" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="section-title">What we offer</h2>
-            <p>Digital Finance Asset offers 2% return of profits daily for 30days. We also offer bonus to investors during our special time.</p>
+            <p>
+              Digital Finance Asset offers 2% return of profits daily for
+              30days. We also offer bonus to investors during our special time.
+            </p>
           </div>
           <div class="grid-flex">
             <div class="offer-card bg-col-1">
-              <div class="img">
-                <img src="img/icons/bitcoin_.png" alt="">
+              <div class="img" data-aos="fade-up" data-aos-duration="1000">
+                <img src="img/icons/bitcoin_.png" alt="" />
               </div>
-              <div class="text">
+              <div class="text" data-aos="fade-up" data-aos-duration="1000">
                 <h2>Safe & Secure</h2>
-                <p>We use PCI compliant payment processor to ensure that your savings and investment data are always safe.</p>
+                <p>
+                  We use PCI compliant payment processor to ensure that your
+                  savings and investment data are always safe.
+                </p>
               </div>
             </div>
             <div class="offer-card bg-col-2">
-              <div class="img">
-                <img src="img/icons/payout.png" alt="">
+              <div class="img" data-aos="fade-up" data-aos-duration="1000">
+                <img src="img/icons/payout.png" alt="" />
               </div>
-              <div class="text">
+              <div class="text" data-aos="fade-up" data-aos-duration="1000">
                 <h2>Instant Payout</h2>
-                <p>We use PCI compliant payment processor to ensure that your savings and investment data are always safe.</p>
+                <p>
+                  We use PCI compliant payment processor to ensure that your
+                  savings and investment data are always safe.
+                </p>
               </div>
             </div>
             <div class="offer-card bg-col-3">
-              <div class="img">
-                <img src="img/icons/wallet_monochromatic.svg" alt="">
+              <div class="img" data-aos="fade-up" data-aos-duration="1000">
+                <img src="img/icons/wallet_monochromatic.svg" alt="" />
               </div>
-              <div class="text">
+              <div class="text" data-aos="fade-up" data-aos-duration="1000">
                 <h2>Secure Wallet</h2>
-                <p>We use PCI compliant payment processor to ensure that your savings and investment data are always safe.</p>
+                <p>
+                  We use PCI compliant payment processor to ensure that your
+                  savings and investment data are always safe.
+                </p>
               </div>
             </div>
             <div class="offer-card bg-col-4">
-              <div class="img">
-                <img src="img/icons/it_support.png" alt="">
+              <div class="img" data-aos="fade-up" data-aos-duration="1000">
+                <img src="img/icons/it_support.png" alt="" />
               </div>
-              <div class="text">
+              <div class="text" data-aos="fade-up" data-aos-duration="1000">
                 <h2>Experts Support</h2>
-                <p>Our lines are always open to provide you with as much support as you may require anytime, any day.</p>
+                <p>
+                  Our lines are always open to provide you with as much support
+                  as you may require anytime, any day.
+                </p>
               </div>
             </div>
           </div>
@@ -153,85 +265,123 @@
       <!-- Plans Section -->
       <section class="section plans-section">
         <div class="container">
+          <div class="row">
+            <div class="col-md-5 sm-10 mx-auto">
+              <div class="text" data-aos="fade-up" data-aos-duration="1000">
+                <h2>DigitalFinance Investment Plans</h2>
+                <p>
+                  Digital Finance Asset offers 2% return of profits daily for
+                  30days. We also offer bonus to investors during our special
+                  time.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 sm-10 mx-auto">
+              <div class="invest-card" data-aos="fade-up" data-aos-duration="1000">
+                <h3 class="plan">Gold</h3>
+                <h2 class="amount">1.5%<sub>/Daily</sub></h2>
+                <ul>
+                  <li>
+                    <h6>45%/Monthly</h6>
+                  </li>
+                  <li>
+                    <h6>Minimum $100</h6>
+                  </li>
+                </ul>
+                <a href="reg.html" class="core-btn">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Plans Section One -->
+      <!-- <section class="section plans-section">
+        <div class="container">
           <div class="title-container">
-            <h2 class="section-title">Investment Plans</h2>
-            <p>Digital Finance Asset offers 2% return of profits daily for 30days. We also offer bonus to investors during our special time.</p>
+            <h2>DigitalFinance Investment Plans</h2>
+            <p>
+              Digital Finance Asset offers 2% return of profits daily for
+              30days. We also offer bonus to investors during our special time.
+            </p>
           </div>
           <div class="grid-flex">
             <div class="invest-card">
               <h3 class="plan">Bronze</h3>
-              <h2 class="amount">10-12%<sub>/month</sub></h2>
+              <h2 class="amount">1.5%<sub>/Daily</sub></h2>
               <ul>
                 <li>
-                  <h6>Monthly to 3/5 months</h6>
+                  <h6>45%/Monthly</h6>
                 </li>
                 <li>
                   <h6>Minimum $100</h6>
-                </li>
-                <li>
-                  <h6>Maximum $300</h6>
                 </li>
               </ul>
               <a href="#" class="core-btn">Get Started</a>
             </div>
             <div class="invest-card">
               <h3 class="plan">Sliver</h3>
-              <h2 class="amount">10-12%<sub>/month</sub></h2>
+              <h2 class="amount">1.5%<sub>/Daily</sub></h2>
               <ul>
                 <li>
-                  <h6>Monthly to 3/5 months</h6>
+                  <h6>45%/Monthly</h6>
                 </li>
                 <li>
                   <h6>Minimum $100</h6>
-                </li>
-                <li>
-                  <h6>Maximum $300</h6>
                 </li>
               </ul>
               <a href="#" class="core-btn">Get Started</a>
             </div>
             <div class="invest-card">
               <h3 class="plan">Gold</h3>
-              <h2 class="amount">10-12%<sub>/month</sub></h2>
+              <h2 class="amount">1.5%<sub>/Daily</sub></h2>
               <ul>
                 <li>
-                  <h6>Monthly to 3/5 months</h6>
+                  <h6>45%/Monthly</h6>
                 </li>
                 <li>
                   <h6>Minimum $100</h6>
-                </li>
-                <li>
-                  <h6>Maximum $300</h6>
                 </li>
               </ul>
               <a href="#" class="core-btn">Get Started</a>
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Happy Customers -->
       <section class="section customer-section">
         <div class="container">
-          <div class="title-container">
+          <div class="title-container" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="section-title">Meet Our Happy Customers</h2>
-            <p>Digital Finance Asset offers 2% return of profits daily for 30days. We also offer bonus to investors during our special time.</p>
+            <p>
+              Digital Finance Asset offers 2% return of profits daily for
+              30days. We also offer bonus to investors during our special time.
+            </p>
           </div>
-          <div class="grid-flex">
-            <div class="customer">
-              <img src="img/icons/user1.jpg" alt="">
+          <div class="owl-carousel owl-theme">
+            <div class="customer" data-aos="fade-up" data-aos-duration="1000">
+              <img src="img/icons/user1.jpg" alt="" />
               <div class="text">
                 <h4 class="name">Mary Doe</h4>
                 <small class="country">London</small>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti soluta quo ea dolor cum velit repellendus. Architecto in ullam ea?</p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti soluta quo ea dolor cum velit repellendus. Architecto
+                  in ullam ea?
+                </p>
               </div>
             </div>
-            <div class="customer">
-              <img src="img/icons/user2.jpg" alt="">
+            <div class="customer" data-aos="fade-up" data-aos-duration="1000">
+              <img src="img/icons/user2.jpg" alt="" />
               <div class="text">
                 <h4 class="name">Kolin Mark</h4>
                 <small class="country">Canada</small>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti soluta quo ea dolor cum velit repellendus. Architecto in ullam ea?</p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Corrupti soluta quo ea dolor cum velit repellendus. Architecto
+                  in ullam ea?
+                </p>
               </div>
             </div>
           </div>
@@ -240,49 +390,176 @@
 
       <section class="section drive-section">
         <div class="container">
-          <div class="title-container">
+          <div class="title-container" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="section-title">Things that dirve us as a company</h2>
-            <p>Digital Finance Asset offers 2% return of profits daily for 30days. We also offer bonus to investors during our special time.</p>
+            <p>
+              Digital Finance Asset offers 2% return of profits daily for
+              30days. We also offer bonus to investors during our special time.
+            </p>
           </div>
           <div class="grid-flex">
-            <div class="card-invest">
+            <div class="card-invest" data-aos="fade-up" data-aos-duration="1000">
               <i class="fab fa-bitcoin fa-4x"></i>
               <div class="text">
-                <p>We are so happy and overwhelmed when we pay our investors. that motivates us a lot.</p>
+                <p>
+                  We are so happy and overwhelmed when we pay our investors.
+                  that motivates us a lot.
+                </p>
               </div>
             </div>
-            <div class="card-invest">
+            <div class="card-invest" data-aos="fade-up" data-aos-duration="1000">
               <i class="fab fa-bitcoin fa-4x"></i>
               <div class="text">
-                <p>It’s our priority to create wealth and put a smile on investors faces.</p>
+                <p>
+                  It’s our priority to create wealth and put a smile on
+                  investors faces.
+                </p>
               </div>
             </div>
-            <div class="card-invest">
+            <div class="card-invest" data-aos="fade-up" data-aos-duration="1000">
               <i class="fab fa-bitcoin fa-4x"></i>
               <div class="text">
-                <p>We feel bad when investors get scammed in other platforms, it motivates us too.</p>
+                <p>
+                  We feel bad when investors get scammed in other platforms, it
+                  motivates us too.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <section class="section faq-section" >
+        <div class="container">
+          <div class="title-container" data-aos="fade-up" data-aos-duration="1000">
+            <h2>WE'VE GOT ANSWERS</h2>
+            <h4>Basic questions & answers on our platform</h4>
+          </div>
+          <div class="collapse-container">
+            <div class="accordion" id="accordionExample">
+              <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <div class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseOne"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      <h3>How safe is my investment?</h3>
+                      <i class="fas fa-arrow-down"></i>
+                    </button>
+                  </h2>
+                </div>
+
+                <div
+                  id="collapseOne"
+                  class="collapse"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod. 
+                  </div>
+                </div>
+              </div>
+              <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <div class="card-header" id="headingTwo">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                    <h3>How safe is my investment?</h3>
+                    <i class="fas fa-arrow-down"></i>
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseTwo"
+                  class="collapse"
+                  aria-labelledby="headingTwo"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod.
+                  </div>
+                </div>
+              </div>
+              <div class="card" data-aos="fade-up" data-aos-duration="1000">
+                <div class="card-header" id="headingThree">
+                  <h2 class="mb-0">
+                    <button
+                      class="btn btn-link collapsed"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                    <h3>How safe is my investment?</h3>
+                    <i class="fas fa-arrow-down"></i>
+                    </button>
+                  </h2>
+                </div>
+                <div
+                  id="collapseThree"
+                  class="collapse"
+                  aria-labelledby="headingThree"
+                  data-parent="#accordionExample"
+                >
+                  <div class="card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life
+                    accusamus terry richardson ad squid. 3 wolf moon officia
+                    aute, non cupidatat skateboard dolor brunch. Food truck
+                    quinoa nesciunt laborum eiusmod.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="section contact-section">
         <div class="container">
-          <div class="title-container">
-            <h2 class="section-title">Request a call back</h2>
+          <div class="title-container" data-aos="fade-up" data-aos-duration="1000">
+            <h5>Contact us</h5>
+            <h2 class="section-title">Get in touch</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+              quo minima repellat unde ducimus voluptatem enim nemo accusamus
+              odio iste!
+            </p>
           </div>
           <div class="grid-flex">
-            <div class="contact-img">
-              <img src="img/icons/it_support.png" alt="">
+            <div class="contact-img" data-aos="fade-up" data-aos-duration="1000">
+              <img src="img/icons/it_support.png" alt="" />
             </div>
-            <div class="form">
+            <div class="form" data-aos="fade-up" data-aos-duration="1000">
               <h4>Send a message</h4>
               <form action="">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea name="" id="" cols="30" rows="5" placeholder="Message"></textarea>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="5"
+                  placeholder="Message"
+                ></textarea>
                 <button type="submit" class="core-btn">Send message</button>
               </form>
             </div>
@@ -300,7 +577,11 @@
               <div class="branding">
                 <h3>DigitalInvest</h3>
               </div>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam temporibus blanditiis odit assumenda aperiam ex eveniet mollitia, ea obcaecati consectetur.</p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam
+                temporibus blanditiis odit assumenda aperiam ex eveniet
+                mollitia, ea obcaecati consectetur.
+              </p>
             </div>
             <div class="col-md-4 mx-auto">
               <div class="quick-links">
@@ -338,10 +619,12 @@
                 </div>
                 <div class="info-links">
                   <a href="#">
-                    <i class="fas fa-envelope"></i> info@digitalfinanceasset.com</a
+                    <i class="fas fa-envelope"></i>
+                    info@digitalfinanceasset.com</a
                   >
                   <a href="#">
-                    <i class="fas fa-globe-americas"></i> digitalfinanceasset.com</a
+                    <i class="fas fa-globe-americas"></i>
+                    digitalfinanceasset.com</a
                   >
                 </div>
               </div>
@@ -349,11 +632,54 @@
           </div>
         </div>
       </div>
-      <div class="small-footer"><h6>Copyright &copy; 2020 DigitalInvest All Reserved</h6></div>
+      <div class="small-footer">
+        <h6>Copyright &copy; 2020 DigitalInvest All Reserved</h6>
+      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 400, 
+        once: false,
+        easing: 'ease'
+      });
+    </script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        autoplay:true,
+        // autoWidth:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true,
+        responsive: {
+          0:{
+            items: 1,
+            nav:true
+        },
+        600:{
+            items:2,
+            nav:false
+        },
+        1000:{
+            items:2,
+            nav:true,
+            loop:true
+        },
+      }
+      })
+    </script>
+    <script>
+      var typed = new Typed('#typed', {
+        stringsElement: '#typed-strings',
+        typeSpeed: 40
+      });
+    </script>
   </body>
 </html>

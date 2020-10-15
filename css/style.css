@@ -173,6 +173,12 @@ p {
   text-align: center;
 } */
 
+.ticker {
+  background: #fff;
+  padding-top: 2rem;
+  color: #333;
+}
+
 .title-container {
   width: 60%;
   height: auto;
@@ -273,6 +279,7 @@ p {
 }
 
 /* Investment PLans */
+
 .plans-section {
   /* background: var(--clr-primary-1);
   border-top-left-radius: 40%;
@@ -283,13 +290,24 @@ p {
   background-repeat: no-repeat;
 }
 
+.plans-section .text {
+  color: #fff;
+  text-align: left;
+  font-family: var(--ff-secondary);
+  width: 100%;
+}
+.plans-section .text h2 {
+  font-size: 3.5rem;
+  margin-top: 4rem;
+}
+
 .plans-section .title-container {
   color: #fff;
 }
 
 .plans-section .invest-card {
   height: 100%;
-  padding: 4rem 2rem;
+  padding: 4rem 3.5rem;
   background: #fff;
   border-radius: 10px;
   box-shadow: var(--dark-shadow);
@@ -303,7 +321,7 @@ p {
 
 .invest-card .plan {
   font-weight: 700;
-  color: #00acee;
+  color: var(--clr-start-yellow);
   font-family: var(--ff-secondary);
 }
 
@@ -332,6 +350,8 @@ p {
 .invest-card ul li h6 {
   font-weight: 700;
   letter-spacing: var(--spacing);
+  font-family: var(--ff-secondary);
+  line-height: 1.5;
 }
 
 .invest-card a {
@@ -345,12 +365,12 @@ p {
 }
 
 .customer-section .customer {
-  width: 45%;
-  height: 280px;
+  width: 90%;
+  height: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  text-align: center;
+  text-align: left;
   position: relative;
   background: var(--clr-primary-1);
   border-radius: 10px;
@@ -358,20 +378,19 @@ p {
   padding: 20px;
 }
 
+.typed-cursor {
+  display: none;
+}
+
 .customer-section .customer img {
-  width: 150px;
+  width: 150px !important;
   height: 150px;
   border-radius: 50%;
-  position: relative;
-  border: solid 10px var(--clr-primary-1);
+  border: solid 10px var(--clr-primary-1) !important;
   object-fit: cover;
-  top: -4rem;
-  left: 0rem;
 }
 
 .customer-section .customer .text {
-  position: relative;
-  top: -4rem;
 }
 
 .customer-section .customer .text .name {
@@ -469,6 +488,40 @@ p {
   color: #3b5998;
 } */
 
+.collapse-container .card{
+  width: 100%;
+  margin-bottom: 1rem;
+  box-shadow: var(--dark-shadow);
+  padding: 00;
+}
+
+.collapse-container .card .card-header {
+  padding: 0;
+}
+
+.collapse-container button {
+  display: flex;
+  justify-content: space-between;
+  color: #333;
+  font-family: var(--ff-secondary);
+  font-size: 1rem;
+  border-radius: 10px;
+}
+.collapse-container button:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.collapse-container button h3 {
+  font-size: 1.3rem;
+}
+
+.collapse-container button .fa-arrow-down {
+  font-size: 1.2rem;
+  padding: 10px;
+  border: solid 2px var(--clr-secondary);
+  border-radius: 50%;
+}
 
 /*==========================
  =========Mobile Screen Start========
@@ -694,6 +747,10 @@ header nav ul li .reg-btn:hover {
   border-radius: 10px;
 }
 
+.contact-section h5 {
+  color: #DF2935;
+}
+
 .contact-section .form h4 {
   font-weight: 900;
   font-family: var(--ff-secondary);
@@ -740,7 +797,7 @@ footer .quick-links ul li a {
 }
 
 .social .socail-icons a{
-  font-size: 2rem;
+  font-size: 1rem;
   padding: 10px;
   color: #fff;
 }
@@ -751,6 +808,10 @@ footer .quick-links ul li a {
   padding: 10px;
   color: #fff;
   transition: var(--transition);
+}
+footer h3 {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 footer .social .info-links a{
