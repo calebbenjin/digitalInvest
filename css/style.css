@@ -28,7 +28,7 @@
 
 body {
   font-family: var(--ff-primary);
-  background: #d8d8d8ee;
+  background: #eeeeeeee;
   color: var(--clr-dark);
   line-height: 1.5;
   font-size: 0.875rem;
@@ -122,7 +122,7 @@ p {
   text-transform: uppercase;
   background: var(--clr-secondary);
   color: var(--clr-white);
-  padding: 0.95rem 0.95rem;
+  padding: 15px 0.95rem;
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 700;
@@ -134,6 +134,9 @@ p {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
   white-space: nowrap;
+}
+.core-btn:focus {
+  outline: none;
 }
 
 .core-btn:hover {
@@ -757,23 +760,88 @@ header nav ul li .reg-btn:hover {
   margin-bottom: 2rem;
 }
 
-textarea:focus, input[type=email]:focus, input[type=text]:focus {
+textarea:focus, input[type=email]:focus, input[type=text]:focus, input[type=password]:focus {
   outline: none;
-  border-bottom: solid 1px #DF2935;
+  border-bottom: solid 2px #DF2935;
 }
 
-
-.contact-section form input, textarea {
-  padding: 10px 20px;
+form input, textarea {
+  padding: 15px 2rem;
   border: none;
   border-bottom: solid 1px #cccc;
-  border-radius: 30px;
+  border-radius: 10px;
+  box-shadow: var(--dark-shadow);
 }
 
 .contact-section form input, textarea, button{
   display: block;
   width: 100%;
   margin: 1rem 0;
+}
+
+
+/* Login */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 6rem 1rem;
+}
+
+.form-title {
+  font-family: var(--ff-secondary);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.form {
+  text-align: center;
+  background: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: var(--dark-shadow);
+}
+.form .form-group {
+  text-align: left;
+}
+.pass-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.pass-container small a {
+  color: var(--clr-secondary);
+  font-weight: bold;
+}
+form .signup-link {
+  font-weight: bold;
+}
+form .signup-link a{
+ color: var(--clr-primary);
+ text-transform: uppercase;
+ font-family: var(--ff-secondary);
+}
+.form .form-group label {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+.form .form-group input {
+  width: 100%;
+  padding: 15px 2rem;
+  border: none;
+  /* border-bottom: solid 1px #333; */
+  border-radius: 10px;
+  box-shadow: var(--light-shadow);
+  border: solid 1px #ccc;
+  transition: var(--transition);
+}
+
+.form .form-group input:focus {
+  outline: none;
+  border: solid 1px var(--clr-primary);
 }
 
 footer {
