@@ -621,6 +621,9 @@ header .socail-icons a {
 }
 
 /* header nav */
+header {
+  width: 100%;
+}
 header .header {
   background: #fff;
   padding-top: 20px;
@@ -779,6 +782,36 @@ form input, textarea {
   margin: 1rem 0;
 }
 
+.about-img {
+  border-radius: 50px;
+  box-shadow: var(--light-shadow);
+  margin-top: 1rem;
+}
+
+/* About Page */
+.about-landing {
+  background: var(--clr-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+}
+.about-heading h1 {
+  font-family: var(--ff-secondary);
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .about-heading h1 {
+    font-family: var(--ff-secondary);
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .about-landing {
+    padding-top: 8rem;
+  }
+}
 
 /* Login */
 .form-container {
@@ -942,7 +975,6 @@ footer .small-footer h6 {
     position: fixed;
     top: 0;
     width: 100%;
-    /* display: none; */
     z-index: 999;
   }
 
@@ -955,14 +987,17 @@ footer .small-footer h6 {
     top: 0;
     left: 0;
     width: 70%;
-    height: 50vh;
+    height: 100vh;
     background: #fff;
     z-index: 999999;
-    padding: 30px 7px;
+    padding: 3rem 7px;
     border-top: solid 2px #DF2935;
-    border-bottom-right-radius: 30%;
     transform: translate(-100%);
     transition: var(--transition);
+  }
+
+  .show {
+    transform: translate(0);
   }
 
   header nav ul li {
@@ -972,7 +1007,7 @@ footer .small-footer h6 {
 
   .reg-btn {
     text-transform: uppercase;
-    padding: 0.175rem 0.75rem;
+    padding: 0.1rem 0.75rem;
     display: inline-block;
     font-weight: 700;
     -webkit-transition: var(--transition);
@@ -1025,6 +1060,11 @@ footer .small-footer h6 {
     box-shadow: var(--dark-shadow);
     transition: var(--transition);
     margin-bottom: 2rem;
+  }
+
+  .plans-section .text h2{
+    font-size: 2.5rem;
+    margin-top: 0rem;
   }
 
   .customer-section .customer {
