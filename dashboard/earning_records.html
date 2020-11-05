@@ -12,13 +12,6 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     />
-    <!--Import materialize.css-->
-    <!-- <link
-      type="text/css"
-      rel="stylesheet"
-      href="../css/materialize.min.css"
-      media="screen,projection"
-    /> -->
     <!-- FontAwesome -->
     <link
       rel="stylesheet"
@@ -128,37 +121,46 @@
               <div class="line"></div>
               <div class="line"></div>
             </div>
-            
           </div>
         </div>
 
         <section class="dashboard">
           <div class="container">
-            <h3 class="main-title"><i class="fas fa-cogs"></i>Reset Password</h3>
-            <hr>
-            <div class="reset_Password">
-              <div class="row">
-                <div class="col-md-6 mx-auto">
-                  <div class="form">
-                    <h3 class="main-title text-center mb-4"><i class="fas fa-cogs"></i>Reset Password</h3>
-                    <form action="">
-                      <div class="form-group">
-                        <label for="current_password">Current Password</label>
-                        <input type="password" placeholder="Current password">
-                      </div>
-                      <div class="form-group">
-                        <label for="new_password">New Password</label>
-                        <input type="password" placeholder="New password">
-                      </div>
-                      <div class="form-group">
-                        <label for="confirm_password">Confirm Password</label>
-                        <input type="password" placeholder="confirm password">
-                      </div>
-                      <button class="core-btn">Reset</button>
-                    </form>
-                  </div>
-                </div>
-              </div>
+            <h3 class="main-title"><i class="fas fa-cogs"></i> Earning records</h3>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <!-- <th scope="col">S/NO</th> -->
+                    <th scope="col">Date</th>
+                    <th scope="col">Plan name</th>
+                    <th scope="col">Payable Interest</th>
+                    <th scope="col">Period</th>
+                    <th scope="col">Received</th>
+                    <th scope="col">capital Back</th>
+                    <th scope="col">Invested Amount</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Next Payment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- <th scope="row">1</th> -->
+                    <td>22/Oct/2020</td>
+                    <td>Baby plan</td>
+                    <td>23.00/Weekly</td>
+                    <td>3 times</td>
+                    <td>1 times</td>
+                    <td><p class="yes">yes</p></td>
+                    <td>110.00</td>
+                    <td><div class="loader-spinner">
+                      <span class="spinner-border spinner-grow-sm spinner-border-sm text-dark" role="status"></span>
+                      <span>Runing</span>
+                    </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
