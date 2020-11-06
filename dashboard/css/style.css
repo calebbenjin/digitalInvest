@@ -197,6 +197,9 @@ aside .nav-list li a .fas {
   /* color: #fff; */
   transition: var(--transition);
 }
+aside .nav-list .dropdown {
+  background: var(--clr-primary);
+}
 aside .nav-list li a{
   white-space: nowrap;
   line-height: 3;
@@ -208,6 +211,7 @@ aside .nav-list li a{
   text-transform: capitalize;
   color: #fff;
   transition: var(--transition);
+  background: var(--clr-primary);
   /* border-bottom: solid 1px #949494; */
 }
 aside .nav-list li a:hover{
@@ -324,12 +328,13 @@ main article .nav h6{
 }
 .invest-card {
   height: 90%;
-  padding: 4rem 3.5rem;
+  padding: 4rem 2rem;
   background: #fff;
   border-radius: 10px;
   box-shadow: var(--dark-shadow);
   transition: var(--transition);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .invest-card:hover {
@@ -710,7 +715,17 @@ tbody tr .loader-spinner {
     transform: translate(0);
   }
   
-  
+  aside .nav-list {
+    margin: 1em 0;
+    transition: var(--transition);
+  }
+  .user-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    text-align: center;
+  } 
 
   .withdraw {
     width: 100%;
@@ -776,6 +791,13 @@ tbody tr .loader-spinner {
     color: #494949;
     white-space: nowrap;
     text-transform: capitalize;
+  }
+
+  .user-status img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 1rem;
   }
 
   .wallet-list a {
