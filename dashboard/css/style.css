@@ -356,9 +356,10 @@ main article .nav h6{
   font-weight: 900;
   margin: 1.5rem 0;
 }
-
-.invest-card .amount sub {
-  font-size: medium;
+@media(max-width: 1324px) {
+  .invest-card .amount {
+    font-size: 2rem;
+  }
 }
 
 .invest-card ul {
@@ -625,10 +626,7 @@ tbody tr .loader-spinner {
 @media(max-width: 768px) {
 
 
-  main article .nav {
-    background: #022464;
-    color: #fff;
-  }
+
 
   .referral-link {
     background: #ccc;
@@ -643,17 +641,23 @@ tbody tr .loader-spinner {
     font-size: 0.8rem;
   }
 
-  main article .nav .container {
+  main article .nav {
+    background: #fff;
+  }
+
+  main article {
+    width: 100%;
+  }
+  main article .nav .container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    padding-right: 0;
   }
 
   main article .nav .container .brand-logo h3 {
-    color: #fff;
+    color: var(--clr-primary);
     font-size: 1.4rem;
     font-weight: 900;
-    /* text-transform: uppercase; */
   }
   .main-title {
     font-weight: 900;
@@ -671,12 +675,13 @@ tbody tr .loader-spinner {
   .bugger-show .line {
     width: 40px;
     height: 4px;
-    background: #fff;
+    background: var(--clr-primary);
     margin-bottom: 4px;
     transition: var(--transition);
   }
 
   .bugger-style .line:nth-child(1) {
+    width: 30px;
     transform: rotate(60deg);
     background: var(--clr-secondary);
     margin-bottom: 0;
@@ -685,6 +690,7 @@ tbody tr .loader-spinner {
     display: none;
   }
   .bugger-style .line:nth-child(3) {
+    width: 30px;
     transform: rotate(-60deg);
     background: var(--clr-secondary);
     margin-top: 0;
@@ -704,23 +710,6 @@ tbody tr .loader-spinner {
     transform: translate(0);
   }
   
-  main article {
-    width: 100%;
-  }
-  main article .nav .container{
-    display: flex;
-    justify-content: space-between;
-    padding-right: 0;
-  }
-
-  article .nav .user-avata p{
-    display: none;
-  }
-
-  article .nav .brand-logo img {
-    width: 100%;
-    height: 50px;
-  }
   
 
   .withdraw {
@@ -809,10 +798,10 @@ tbody tr .loader-spinner {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* box-shadow: none; */
+    box-shadow: none;
   }
   .address h5 {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-left: 1.2rem;
   }
   .address .fas {
@@ -825,12 +814,23 @@ tbody tr .loader-spinner {
   }
   .qrcode img {
     width: 40%;
+    height: 100px;
     margin: 1rem 0;
   }
 
   .currency-selector .bitcoin-img  img{
     width: 400px;
     margin: 1rem auto;
+  }
+
+  .invest-card {
+    height: 90%;
+    padding: 4rem 1.5rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--dark-shadow);
+    transition: var(--transition);
+    margin-bottom: 1rem;
   }
   
 }
