@@ -198,8 +198,11 @@ aside .nav-list li a .fas {
   transition: var(--transition);
 }
 aside .nav-list .dropdown {
-  background: transparent;
-  border-radius: none;
+  background: transparent!important;
+  border-radius: none!important;
+}
+aside .nav-list .dropdown-toggle {
+  background: transparent!important;
 }
 aside .nav-list li a{
   white-space: nowrap;
