@@ -632,7 +632,7 @@ tbody tr .loader-spinner {
   display: none;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 800px) {
 
 
 
@@ -722,6 +722,9 @@ tbody tr .loader-spinner {
   aside .nav-list {
     margin: 1em 0;
     transition: var(--transition);
+  }
+  aside .nav-list li a{
+   font-size: 0.8rem;
   }
   .user-status {
     display: flex;
@@ -827,7 +830,7 @@ tbody tr .loader-spinner {
     box-shadow: none;
   }
   .address h5 {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-left: 1.2rem;
   }
   .address .fas {
@@ -851,6 +854,7 @@ tbody tr .loader-spinner {
 
   .invest-card {
     height: 90%;
+    width: 100%;
     padding: 4rem 1.5rem;
     background: #fff;
     border-radius: 10px;

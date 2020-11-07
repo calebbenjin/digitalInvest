@@ -133,9 +133,9 @@
             <hr>
             <div class="payment-form">
               <div class="row">
-                <div class="col-md-4 mx-auto">
+                <div class="col-lg-4 col-md-6 col-sm-10 mx-auto">
                   <div class="plans-card">
-                    <div class="invest-card">
+                    <div class="invest-card" id="selected__card">
                       <h3 class="plan">Platinum</h3>
                       <h2 class="amount">1.5%<span>/Daily</span></h2>
                       <ul>
@@ -151,24 +151,25 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 mx-auto">
+                <div class="col-lg-7 col-md-6 col-sm-10 mx-auto">
                   <div class="form">
                     <h4 class="title">Procceed payment</h4>
-                    <form action="" id="depositForm">
+                    <form action=""  id="deposit__form">
                       <div class="form-group">
-                        <input type="text" placeholder="Amount" id="depositAmount" required>
+                        <input type="text" value="0.00" id="amount__input">
+                        <small class="text-danger">Amount must be above $500</small>
                         <i class="fas fa-dollar-sign"></i>
                       </div>
                       <div class="form-group">
-                        <input type="text" value="Platinum" id="planInput" disabled required>
+                        <input type="text" value="Platinum" id="plan__input" disabled>
                         <i class="fas fa-seedling"></i>
                       </div>
                       <div class="form-group">
-                        <input type="text" value="BTC" id="cryptoTypeInput" disabled required>
+                        <input type="text" value="BTC" id="cryptoType__input" disabled>
                         <i class="fas fa-coins"></i>
                       </div>
                       <div class="form-group address">
-                        <h5 id="walletAddress">8uf8w9vfcjunhsdboh983e8y8wc9ubcd3</h5>
+                        <h5 id="walletAddress">8uf8w9vfcjunhsdboh983e8y</h5>
                         <i class="fas fa-copy" id="copy"></i>
                       </div>
                       <div class="form-group">
@@ -177,7 +178,7 @@
                       <div class="form-group qrcode">
                         <img src="img/qrcode.png" alt="">
                       </div>
-                      <button class="core-btn" id="depositBtn">
+                      <button class="core-btn" id="deposit__btn">
                       
                         <span class="send">Send</span>
                         <!-- <span>Send...</span> -->

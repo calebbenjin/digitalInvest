@@ -7,20 +7,31 @@ const DataController = (() => {
 const UIController = (() => {
 
   const DOMStrings = {
-    cardBtn: '',
-    sendBtn: '',
-    depositBtn: '#depositBtn',
+    // Deposit form
+    depositForm: '#deposit__form',
+    amountInput: '#amount__input',
+    planType: '#plan__input',
+    cryptoType: '#cryptoTypeInput',
+    depositBtn: '#deposit__btn',
     depositCardId: '',
-    depositamountInput: '#depositAmount',
+    
     buggerBtn: '.bugger-show',
     sideNav: 'aside',
     liteCoin: '#litecoin',
     btcCoin: '#btc',
     xrpCoin: '#xrp',
     copyId: '#copy',
-    depositForm: '#depositForm',
     plansInput: '#planInput',
-    cryptoType: '#cryptoTypeInput',
+
+    // plans selector
+    plans: [
+      {
+        plan1: '#plan1',
+        plan2: '#plan2',
+        plan3: '#plan3',
+      }
+    ],
+    
     withdrawAmountInput: '#withdrawAmount',
     withdrawBtn: '#withdrawBtn'
   }
@@ -28,11 +39,14 @@ const UIController = (() => {
   return {
     getInput: () => {
       return {
+        depForm: document.querySelector(DOMStrings.depositForm),
+        amountInput: document.querySelector(DOMStrings.amountInput),
         toggleBtn: document.querySelector(DOMStrings.buggerBtn),
         navBar: document.querySelector(DOMStrings.sideNav),
         copy: document.querySelector(DOMStrings.copyId),
-        depFormSubmit: document.querySelector(DOMStrings.depositForm),
         depBtns: document.querySelector(DOMStrings.depositBtn),
+        // plansCard: document.querySelector(DOMStrings.plans),
+
         // depAmount: document.querySelector(DOMStrings.depositAmount).value
       }
     },
@@ -43,20 +57,21 @@ const UIController = (() => {
   }
 })();
 
+
+
 // Global App Controller 
 const Controller = ((DataCtrl, UICtrl) => {
 
   const setUpEventListeners = () => {
     let DOM = UICtrl.getDomString() 
-
-    document.querySelector(DOM.buggerBtn).addEventListener('click', ctrlToggleBtn)
     
+    document.querySelector(DOM.buggerBtn).addEventListener('click', ctrlToggleBtn)
     // document.querySelector(DOM.copyId).addEventListener('click', copyContent)
-    document.querySelector(DOM.depositBtn).addEventListener('click', btnLoader)
-    document.querySelector(DOM.depositForm).addEventListener('click', formSubmit)
+    // document.querySelector(DOM.plans).addEventListener('click', cardPlans)
+    document.querySelector(DOM.depositForm).addEventListener('submit', formSubmit)
     document.addEventListener('keypress', function(e) {
       if (e.keyCode === 13 || e.which === 13) {
-        btnLoader()
+        // btnLoader()
         formSubmit();
       }
     })
@@ -87,24 +102,54 @@ const Controller = ((DataCtrl, UICtrl) => {
   //   document.execCommand("copy")
   // }
 
-  // Deposit Form Submit
-  const formSubmit = () => {
-    // console.log('hello')
-    const AmountValue = UICtrl.getInput().depAmount
-    console.log(AmountValue, 'Hello world');
-  }
+  // const cardPlans = () => {
+  //   const plansArr = UICtrl.getInput().plansCard
+  //   console.log(plansArr)
+  // }
+  // cardPlans()
+
 
   const btnLoader = (e) => {
-    // e.preventDefault()
-    formSubmit();
     const innerLoader = UICtrl.getInput().depBtns
-    // innerLoader.innerText = 'Sending...'
+    innerLoader.innerText = 'Sending...'
     setTimeout(() => {
       innerLoader.innerText = 'Send'
     },2000)
     innerLoader.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"><span class="sr-only">Loading...</span></span> <span class="sending">Sending...</span>`
     
   }
+
+
+  // showSuccess
+  const small = document.querySelector('small');
+  small.style.display = 'none'
+  const checkAmountLength = (min) => {
+    const inputValue = UICtrl.getInput().amountInput
+    
+    
+    if(inputValue.value < Number(min) || inputValue.value.trim() === '') {
+      small.style.display = 'block'
+        small.style.fontWeight = 'bold'
+      setTimeout(() => {
+        small.style.display = 'none'
+      },2000)
+      // small
+    } else {
+      small.style.display = 'none'
+      btnLoader()
+    }
+  }
+  
+
+  // Deposit Form Submit
+  const formSubmit = (e) => {
+    e.preventDefault()
+    
+    checkAmountLength(500)
+    // btnLoader()
+  }
+
+  
 
 
   return {
@@ -115,6 +160,5 @@ const Controller = ((DataCtrl, UICtrl) => {
   }
 
 })(DataController, UIController);
-
 
 Controller.init();
