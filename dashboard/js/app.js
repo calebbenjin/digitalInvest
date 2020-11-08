@@ -24,13 +24,7 @@ const UIController = (() => {
     plansInput: '#planInput',
 
     // plans selector
-    plans: [
-      {
-        plan1: '#plan1',
-        plan2: '#plan2',
-        plan3: '#plan3',
-      }
-    ],
+    
     
     withdrawAmountInput: '#withdrawAmount',
     withdrawBtn: '#withdrawBtn'
@@ -120,22 +114,20 @@ const Controller = ((DataCtrl, UICtrl) => {
   }
 
 
-  // showSuccess
-  const small = document.querySelector('small');
-  small.style.display = 'none'
+
   const checkAmountLength = (min) => {
     const inputValue = UICtrl.getInput().amountInput
-    
+    const smallTag = document.querySelector('small');
     
     if(inputValue.value < Number(min) || inputValue.value.trim() === '') {
-      small.style.display = 'block'
-        small.style.fontWeight = 'bold'
+      smallTag.style.display = 'block'
+      smallTag.style.fontWeight = 'bold'
       setTimeout(() => {
-        small.style.display = 'none'
+       smallTag.style.display = 'none'
       },2000)
       // small
     } else {
-      small.style.display = 'none'
+      smallTag.style.display = 'none'
       btnLoader()
     }
   }
