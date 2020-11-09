@@ -146,16 +146,18 @@
                 <div class="col-md-6 mx-auto">
                   <div class="form">
                     <h4 class="title">Withdraw now</h4>
-                    <form id="withdraw__form">
+                    <form action="" id="withdrawForm">
                       <div class="form-group">
-                        <input type="text" placeholder="Amount" id="withdrawAmount">
+                        <input type="text" placeholder="Amount" id="withdraw_amount">
+                        <small>Error Message</small>
                         <i class="fas fa-dollar-sign"></i>
                       </div>
                       <div class="form-group">
-                        <input type="text" placeholder="Wallet address">
+                        <input type="text" placeholder="Wallet address" id="wallet_address">
+                        <small>Error Message</small>
                         <i class="fas fa-wallet"></i>
                       </div>
-                      <div class="forms">
+                      <div class="card">
                         <select class="select wide">
                           <option class="option" selected>Choose crypto</option>
                           <option>...</option>
